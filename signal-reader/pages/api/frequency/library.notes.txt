@@ -1,0 +1,27 @@
+library aufgaben
+
+doku
+qr code connection (5 digit integer)
+adding completely new book
+seed db with library users
+
+emoji parsing
+/\p{Extended_Pictographic}/ug.exec("ALKJER k❤️master 😚 sus äh dings 😎😆😆 huch lol🤪")
+
+
+warum die initiative getroffen werden muss
+
+
+andere phase als gedacht
+produktidee gewechselt
+
+demo fertig => nichts zu entwickeln
+werdens für den sommer auch nicht haben
+von daher ergibts keinen sinn 
+
+
+urlaub zeitrahmen
+
+20.5. - 24.6.
+4.7. - 19.7.
+11.8. - 31.8.
