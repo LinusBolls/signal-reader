@@ -1,11 +1,12 @@
 const fs = require("fs");
+const os = require("os");
 const sqlite3 = require("@journeyapps/sqlcipher").verbose();
 
 const DB_PATH =
-  "/Users/linusbolls/Library/Application Support/Signal/sql/db.sqlite";
+  os.homedir() + "/Library/Application Support/Signal/sql/db.sqlite";
 
 const CONFIG_PATH =
-  "/Users/linusbolls/Library/Application Support/Signal/config.json";
+  os.homedir() + "/Library/Application Support/Signal/config.json";
 
 const db = new sqlite3.Database(DB_PATH);
 

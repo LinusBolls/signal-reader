@@ -1,6 +1,7 @@
 import sqlite3lib from "@journeyapps/sqlcipher";
 
 import fs from "fs";
+import os from "os"
 
 const sqlite3 = sqlite3lib.verbose();
 
@@ -29,10 +30,10 @@ async function initDb() {
   const db = new sqlite3.Database(Path.DB);
 
   // using SQLCipher v4
-  db.run("PRAGMA cipher_compatibility = 4", (err) => {});
+  db.run("PRAGMA cipher_compatibility = 4", (err) => { });
 
   // https://www.zetetic.net/sqlcipher/sqlcipher-api/
-  db.run(`PRAGMA key = "x'${key}'"`, (err) => {});
+  db.run(`PRAGMA key = "x'${key}'"`, (err) => { });
 
   db.serialize();
 
@@ -55,8 +56,8 @@ function guard(query: any, res: any, validator: any) {
 export { initDb, dbAll, guard };
 
 const potentialSignalPaths = [
-  "/Users/linusbolls/Library/Application Support/Signal/",
-  "%APPDATA%/Signal",
+  os.homedir() + "/Library/Application Support/Signal/",
+  os.homedir() + "/AppData/Roaming/Signal/",
 ];
 
 function isErrorNotFound(err: any) {
